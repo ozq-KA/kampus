@@ -3,44 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampüs Kulübü - Ana Sayfa</title>
+    <title>Ana Sayfa - Kampüs Etkinlikleri</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">Kampüs Kulübü</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="etkinlikler.html">Etkinlikler</a></li>
-                <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <!-- Karşılama Alanı -->
-        <section class="hero">
-            <h1>Kampüs Kulübüne Hoş Geldiniz</h1>
-            <p>Birlikte öğrenmek, üretmek ve yeni buluşmalar gerçekleştirmek için doğru yerdesiniz.</p>
-            <a href="etkinlikler.html" class="btn">Etkinlikleri İncele</a>
-        </section>
-
-        <!-- Öne Çıkanlar / Kısa Tanıtım -->
-        <section class="features-grid">
-            <div class="card">
-                <h2>🚀 Neler Yapıyoruz?</h2>
-                <p>Web teknolojileri, kodlama atölyeleri ve yazılım dünyasına dair güncel konuları birlikte keşfediyoruz.</p>
+<body class="home-body">
+    <nav>
+        <div class="nav-container">
+            <span class="logo">🎓 Kampüs Portalı</span>
+            <div class="nav-links">
+                <a href="index.html" class="active">Ana Sayfa</a>
+                <a href="etkinlikler.html">Etkinlikler</a>
+                <a href="hakkimizda.html">Hakkımızda</a>
             </div>
-            <div class="card">
-                <h2>🎯 Hedefimiz</h2>
-                <p>Öğrencilerin teorik bilgilerini pratik projelerle pekiştirmesini ve ortak çalışma kültürü kazanmasını sağlamak.</p>
+        </div>
+    </nav>
+
+    <main class="full-screen-container">
+        <section class="hero-card">
+            <div class="badge">BPR201 Projesi</div>
+            <h1>Kampüs Etkinlik Portalı</h1>
+            <p>Üniversitemizdeki kulüp etkinliklerini, akademik seminerleri ve sosyal buluşmaları tek bir platformdan takip edin.</p>
+            
+            <div class="action-buttons">
+                <a href="etkinlikler.html" class="btn primary">Etkinlikleri İncele</a>
+                <a href="hakkimizda.html" class="btn secondary">Hakkımızda</a>
             </div>
-            <div class="card">
-                <h2>📅 Etkinlik Takvimi</h2>
-                <p>Haftalık atölye ve buluşmalarımızı takip etmek için etkinlikler sayfasını ziyaret edebilirsin.</p>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Aktif Etkinlik</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">7/24</span>
+                    <span class="stat-label">Güncel Bilgi</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Kampüs Erişimi</span>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Kampüs Etkinlik Portalı | ÖĞRENCİ NO: 25015221039</p>
+    </footer>
 </body>
 </html>

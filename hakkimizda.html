@@ -3,36 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampüs Kulübü - Hakkımızda</title>
+    <title>Hakkımızda - Kampüs Etkinlikleri</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Kampüs Kulübü</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="etkinlikler.html">Etkinlikler</a></li>
-                <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Modern Navigasyon -->
+    <nav>
+        <div class="nav-container">
+            <span class="logo">🎓 Kampüs Portalı</span>
+            <div class="nav-links">
+                <a href="index.html">Ana Sayfa</a>
+                <a href="etkinlikler.html">Etkinlikler</a>
+                <a href="hakkimizda.html" class="active">Hakkımızda</a>
+            </div>
+        </div>
+    </nav>
 
-    <main class="container">
-        <h1>Hakkımızda</h1>
-        <p>Kampüs Kulübü, öğrenciler arasında iş birliğini artırmak, yazılım ve web teknolojileri alanında pratik yapmak amacıyla kurulmuş örnek bir topluluk platformudur.</p>
+    <!-- Ana İçerik -->
+    <main>
+        <section class="about-hero">
+            <span class="badge">Proje Künyesi</span>
+            <h1>Hakkımızda & Proje Detayları</h1>
+            <p class="about-lead">Bu platform, kampüs yaşamını dijitalleştirmek ve etkinlik yönetimini hızlandırmak amacıyla geliştirilmiş modern bir web uygulamasıdır.</p>
+        </section>
 
-        <section class="grid" style="margin-top: 2rem;">
-            <article class="card">
-                <h2>Vizyonumuz</h2>
-                <p>Öğrencilerin teorik bilgilerini gerçek dünya projelerine dönüştürebileceği, yardımlaşmaya dayalı üretken bir öğrenme ortamı yaratmak.</p>
-            </article>
+        <!-- Bilgi Kartları Grid -->
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>👨‍💻 Geliştirici Bilgileri</h3>
+                <ul class="info-list">
+                    <li><strong>Ad Soyad:</strong> Özgür Kaynak</li>
+                    <li><strong>Öğrenci No:</strong> 25015221039</li>
+                    <li><strong>Ders:</strong> BPR201 Haftalık Proje Ödevi 1</li>
+                </ul>
+            </div>
 
-            <article class="card">
-                <h2>Misyonumuz</h2>
-                <p>Temel web programlama becerilerini (HTML, CSS, JavaScript) eğlenceli ve interaktif atölyelerle herkes için erişilebilir kılmak.</p>
-            </article>
+            <div class="about-card">
+                <h3>🛠️ Kullanılan Teknolojiler</h3>
+                <ul class="tech-tags">
+                    <li>HTML5</li>
+                    <li>CSS3 (Flexbox & Grid)</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Git & GitHub</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="mission-box">
+            <h3>🎯 Projenin Amacı</h3>
+            <p>Üniversite öğrencilerinin kampüsteki etkinliklerden, kulüp faaliyetlerinden ve sosyal duyurulardan anında haberdar olmasını sağlamak; gelişmiş JavaScript arama özellikleri ile kullanıcı dostu bir deneyim sunmaktır.</p>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Kampüs Etkinlik Portalı | ÖĞRENCİ NO: 25015221039</p>
+    </footer>
 </body>
 </html>
