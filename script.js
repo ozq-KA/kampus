@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
        
         resultCount.textContent = `Bulunan etkinlik sayısı: ${matchCount}`;
 
-        // Eşleşme yoksa uyarı mesajı göster
+       
         if (matchCount === 0) {
             noResultMessage.style.display = "block";
         } else {
