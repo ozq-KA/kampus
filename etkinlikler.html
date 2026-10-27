@@ -2,80 +2,70 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampüs Kulübü - Etkinlik Takvimi</title>
+    <title>Etkinlikler - Kampüs</title>
     <link rel="stylesheet" href="style.css">
-    <!-- JavaScript dosyasını defer ile bağlıyoruz -->
-    <script src="script.js" defer></script>
 </head>
 <body>
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+    </nav>
 
-    <header>
-        <nav>
-            <div class="logo">Kampüs Kulübü</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="etkinlikler.html">Etkinlikler</a></li>
-                <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            </ul>
-        </nav>
-    </header>
+    <main>
+        <h1>Kampüs Etkinlikleri</h1>
 
-    <main class="container">
-        <h1>Etkinlik takvimi</h1>
-        <p>Birlikte öğrenmek için yeni buluşmalar. Aşağıdaki kayıtlar eğitim amacıyla hazırlanmış örnek verilerdir.</p>
+        <!-- Arama Alanı ve Kabul Ölçütleri Bileşenleri -->
+        <div class="search-container" style="margin-bottom: 20px;">
+            <label for="searchInput">Etkinlik Ara: </label>
+            <input type="text" id="searchInput" placeholder="Etkinlik başlığı yazın..." style="padding: 5px; width: 250px;">
+            <button id="clearBtn" style="padding: 5px 10px; margin-left: 5px;">Temizle</button>
+            <span id="resultCount" style="margin-left: 15px; font-weight: bold;"></span>
+        </div>
 
-        <!-- Arama Alanı -->
-        <section class="search-area" aria-label="Etkinlik arama">
-            <label for="event-search">Etkinlik başlığına göre ara</label>
-            <div class="search-controls">
-                <input id="event-search" type="search" placeholder="Örnek: HTML" autocomplete="off">
-                <button id="clear-search" type="button">Temizle</button>
+        <div id="noResultMessage" style="display: none; color: red; margin-bottom: 15px; font-weight: bold;">
+            Aradığınız kriterlere uygun etkinlik bulunamadı.
+        </div>
+
+        <!-- En Az 5 Özgün Etkinlik Kartı -->
+        <div class="events-list">
+            <div class="event-card">
+                <h3>Yazılım Atölyesi</h3>
+                <p><strong>Tarih:</strong> 15 Kasım 2026</p>
+                <p><strong>Yer:</strong> Bilgisayar Lab 1</p>
+                <p>Modern web teknolojileri ve GitHub Codespaces kullanımı üzerine pratik çalışma.</p>
             </div>
-            <p id="result-count" role="status" aria-live="polite">5 etkinlik gösteriliyor.</p>
-        </section>
+            
+            <div class="event-card">
+                <h3>Kariyer Günleri</h3>
+                <p><strong>Tarih:</strong> 20 Kasım 2026</p>
+                <p><strong>Yer:</strong> Konferans Salonu</p>
+                <p>Sektörden önemli isimlerin katılımıyla kariyer fırsatları ve mülakat teknikleri.</p>
+            </div>
 
-        <!-- Boş Sonuç Mesajı -->
-        <p id="empty-message" hidden>Aramanıza uygun etkinlik bulunamadı.</p>
+            <div class="event-card">
+                <h3>Yapay Zekâ Semineri</h3>
+                <p><strong>Tarih:</strong> 25 Kasım 2026</p>
+                <p><strong>Yer:</strong> Amfi A</p>
+                <p>Yazılım geliştirme süreçlerinde GitHub Copilot ve yapay zekâ araçlarının rolü.</p>
+            </div>
 
-        <!-- Etkinlik Kartları Listesi (Ödev için en az 5 özgün kart) -->
-        <section id="event-list" class="grid" aria-label="Örnek etkinlikler">
-            <article class="card">
-                <p class="date">12 KASIM / 14.00</p>
-                <h2>HTML Atölyesi</h2>
-                <p>Başlık, paragraf ve linklerle ilk sayfanı oluştur.</p>
-                <p class="location">Yer: Bilgisayar Laboratuvarı</p>
-            </article>
+            <div class="event-card">
+                <h3>Kampüs Konseri</h3>
+                <p><strong>Tarih:</strong> 1 Aralık 2026</p>
+                <p><strong>Yer:</strong> Öğrenci Yaşam Merkezi</p>
+                <p>Öğrenci müzik kulüplerinin düzenlediği canlı müzik dinletisi ve eğlence.</p>
+            </div>
 
-            <article class="card">
-                <p class="date">19 KASIM / 14.00</p>
-                <h2>CSS Tasarım Saati</h2>
-                <p>Renkleri, boşlukları ve sayfa düzenini keşfet.</p>
-                <p class="location">Yer: Bilgisayar Laboratuvarı</p>
-            </article>
-
-            <article class="card">
-                <p class="date">26 KASIM / 14.00</p>
-                <h2>Copilot ile Kod Okuma</h2>
-                <p>Kodunu açıklat, küçük bir değişiklik yap ve sonucu dene.</p>
-                <p class="location">Yer: Çevrim içi buluşma</p>
-            </article>
-
-            <article class="card">
-                <p class="date">3 ARALIK / 14.00</p>
-                <h2>GitHub Atölyesi</h2>
-                <p>Repository, commit ve push işlemlerini birlikte deneyelim.</p>
-                <p class="location">Yer: Bilgisayar Laboratuvarı</p>
-            </article>
-
-            <article class="card">
-                <p class="date">10 ARALIK / 14.00</p>
-                <h2>JavaScript Temelleri</h2>
-                <p>Fonksiyonlar ve değişkenler ile interaktif web sayfaları tasarla.</p>
-                <p class="location">Yer: Bilgisayar Laboratuvarı</p>
-            </article>
-        </section>
+            <div class="event-card">
+                <h3>Robotik Kulübü Buluşması</h3>
+                <p><strong>Tarih:</strong> 5 Aralık 2026</p>
+                <p><strong>Yer:</strong> Mühendislik Fakültesi</p>
+                <p>Yeni dönem projelerinin tanıtımı ve Arduino ile temel robotik uygulamaları.</p>
+            </div>
+        </div>
     </main>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>
