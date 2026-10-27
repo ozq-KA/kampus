@@ -32,35 +32,44 @@ main {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-h1 {
-    color: #2c3e50;
+h1, h2, p {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .search-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin: 25px 0;
     flex-wrap: wrap;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.search-container label {
+    font-weight: bold;
+    color: #2c3e50;
 }
 
 #searchInput {
-    padding: 8px;
-    width: 250px;
+    padding: 8px 12px;
+    width: 240px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 14px;
 }
 
 #clearBtn {
-    padding: 8px 15px;
+    padding: 8px 16px;
     background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #clearBtn:hover {
@@ -69,7 +78,17 @@ h1 {
 
 #resultCount {
     font-weight: bold;
-    color: #555;
+    color: #2c3e50;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#noResultMessage {
+    text-align: center;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 15px 0;
 }
 
 .event-card {
@@ -79,9 +98,11 @@ h1 {
     padding: 15px;
     margin-bottom: 15px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    text-align: left;
 }
 
 .event-card h3 {
     margin-top: 0;
     color: #2980b9;
+    text-align: left;
 }
