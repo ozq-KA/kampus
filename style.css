@@ -1,0 +1,189 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #0d233a;
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    margin-bottom: 0.5rem;
+    color: #0d233a;
+}
+
+
+.search-area {
+    margin: 1.5rem 0;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-area label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.search-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.search-controls input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.search-controls button {
+    padding: 0.6rem 1.2rem;
+    background-color: #0d233a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-controls button:hover {
+    background-color: #163a5f;
+}
+
+#result-count {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+#empty-message {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #fffae6;
+    border: 1px solid #ffe58f;
+    border-radius: 4px;
+    color: #d48806;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-top: 4px solid #0d233a;
+}
+
+.card .date {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #0d233a;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.card .location {
+    font-size: 0.85rem;
+    color: #555;
+    font-style: italic;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0d233a;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #163a5f;
+}

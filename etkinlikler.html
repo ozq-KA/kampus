@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampüs Kulübü - Etkinlik Takvimi</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- JavaScript dosyasını defer ile bağlıyoruz -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Kampüs Kulübü</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="etkinlikler.html">Etkinlikler</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Etkinlik takvimi</h1>
+        <p>Birlikte öğrenmek için yeni buluşmalar. Aşağıdaki kayıtlar eğitim amacıyla hazırlanmış örnek verilerdir.</p>
+
+        <!-- Arama Alanı -->
+        <section class="search-area" aria-label="Etkinlik arama">
+            <label for="event-search">Etkinlik başlığına göre ara</label>
+            <div class="search-controls">
+                <input id="event-search" type="search" placeholder="Örnek: HTML" autocomplete="off">
+                <button id="clear-search" type="button">Temizle</button>
+            </div>
+            <p id="result-count" role="status" aria-live="polite">5 etkinlik gösteriliyor.</p>
+        </section>
+
+        <!-- Boş Sonuç Mesajı -->
+        <p id="empty-message" hidden>Aramanıza uygun etkinlik bulunamadı.</p>
+
+        <!-- Etkinlik Kartları Listesi (Ödev için en az 5 özgün kart) -->
+        <section id="event-list" class="grid" aria-label="Örnek etkinlikler">
+            <article class="card">
+                <p class="date">12 KASIM / 14.00</p>
+                <h2>HTML Atölyesi</h2>
+                <p>Başlık, paragraf ve linklerle ilk sayfanı oluştur.</p>
+                <p class="location">Yer: Bilgisayar Laboratuvarı</p>
+            </article>
+
+            <article class="card">
+                <p class="date">19 KASIM / 14.00</p>
+                <h2>CSS Tasarım Saati</h2>
+                <p>Renkleri, boşlukları ve sayfa düzenini keşfet.</p>
+                <p class="location">Yer: Bilgisayar Laboratuvarı</p>
+            </article>
+
+            <article class="card">
+                <p class="date">26 KASIM / 14.00</p>
+                <h2>Copilot ile Kod Okuma</h2>
+                <p>Kodunu açıklat, küçük bir değişiklik yap ve sonucu dene.</p>
+                <p class="location">Yer: Çevrim içi buluşma</p>
+            </article>
+
+            <article class="card">
+                <p class="date">3 ARALIK / 14.00</p>
+                <h2>GitHub Atölyesi</h2>
+                <p>Repository, commit ve push işlemlerini birlikte deneyelim.</p>
+                <p class="location">Yer: Bilgisayar Laboratuvarı</p>
+            </article>
+
+            <article class="card">
+                <p class="date">10 ARALIK / 14.00</p>
+                <h2>JavaScript Temelleri</h2>
+                <p>Fonksiyonlar ve değişkenler ile interaktif web sayfaları tasarla.</p>
+                <p class="location">Yer: Bilgisayar Laboratuvarı</p>
+            </article>
+        </section>
+    </main>
+    
+</body>
+</html>
