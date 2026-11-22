@@ -1,71 +1,68 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Etkinlikler - Kampüs</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kampüs Etkinlik ve Kulüp Rehberi - Etkinlikler</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Ana Sayfa</a>
-        <a href="etkinlikler.html">Etkinlikler</a>
-        <a href="hakkimizda.html">Hakkımızda</a>
+  <header>
+    <h1 class="site-baslik">Kampüs Etkinlik ve Kulüp Rehberi</h1>
+    <nav aria-label="Ana menü">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="etkinlikler.html">Etkinlikler</a>
+      <a href="hakkimizda.html">Hakkında</a>
     </nav>
+  </header>
 
-    <main>
-        <h1>Kampüs Etkinlikleri</h1>
+  <main>
+    <section class="arama-alani">
+      <label for="arama-kutusu"><strong>Etkinlik Başlığı Ara:</strong></label>
+      <div class="arama-kontroller">
+        <input type="search" id="arama-kutusu" placeholder="Örn: Web Geliştirme, Satranç...">
+        <button type="button" id="temizle-btn">Temizle</button>
+      </div>
+      <p id="sonuc-sayaci" aria-live="polite">Toplam 5 etkinlik gösteriliyor.</p>
+    </section>
 
-        <!-- Arama Alanı ve Kabul Ölçütleri Bileşenleri -->
-        <div class="search-container" style="margin-bottom: 20px;">
-            <label for="searchInput">Etkinlik Ara: </label>
-            <input type="text" id="searchInput" placeholder="Etkinlik başlığı yazın..." style="padding: 5px; width: 250px;">
-            <button id="clearBtn" style="padding: 5px 10px; margin-left: 5px;">Temizle</button>
-            <span id="resultCount" style="margin-left: 15px; font-weight: bold;"></span>
-        </div>
+    <div id="bos-sonuc-mesaji" class="bos-mesaj" hidden>
+      Aramanızla eşleşen etkinlik başlığı bulunamadı.
+    </div>
 
-        <div id="noResultMessage" style="display: none; color: red; margin-bottom: 15px; font-weight: bold;">
-            Aradığınız kriterlere uygun etkinlik bulunamadı.
-        </div>
+    <section class="kart-listesi" id="kart-listesi">
+      <article class="kart">
+        <h2>Modern Web Geliştirme Atölyesi</h2>
+        <p>HTML, CSS ve JavaScript temelleriyle sıfırdan kişisel web sayfası oluşturma uygulaması.</p>
+        <p><strong>Kulüp / Kategori:</strong> Yazılım ve Bilişim Kulübü</p>
+      </article>
 
-        <!-- En Az 5 Özgün Etkinlik Kartı -->
-        <div class="events-list">
-            <div class="event-card">
-                <h3>Yazılım Atölyesi</h3>
-                <p><strong>Tarih:</strong> 15 Kasım 2026</p>
-                <p><strong>Yer:</strong> Bilgisayar Lab 1</p>
-                <p>Modern web teknolojileri ve GitHub Codespaces kullanımı üzerine pratik çalışma.</p>
-            </div>
-            
-            <div class="event-card">
-                <h3>Kariyer Günleri</h3>
-                <p><strong>Tarih:</strong> 20 Kasım 2026</p>
-                <p><strong>Yer:</strong> Konferans Salonu</p>
-                <p>Sektörden önemli isimlerin katılımıyla kariyer fırsatları ve mülakat teknikleri.</p>
-            </div>
+      <article class="kart">
+        <h2>Kampüs Açık Hava Akustik Gecesi</h2>
+        <p>Öğrenci müzik gruplarının canlı sahne performanslarıyla dönem ortası buluşması.</p>
+        <p><strong>Kulüp / Kategori:</strong> Müzik ve Sahne Sanatları Kulübü</p>
+      </article>
 
-            <div class="event-card">
-                <h3>Yapay Zekâ Semineri</h3>
-                <p><strong>Tarih:</strong> 25 Kasım 2026</p>
-                <p><strong>Yer:</strong> Amfi A</p>
-                <p>Yazılım geliştirme süreçlerinde GitHub Copilot ve yapay zekâ araçlarının rolü.</p>
-            </div>
+      <article class="kart">
+        <h2>Yapay Zekâ ve Veri Bilimi Semineri</h2>
+        <p>Günlük hayatta yapay zekâ uygulamaları ve kariyer yolları üzerine söyleşi.</p>
+        <p><strong>Kulüp / Kategori:</strong> Yapay Zekâ Topluluğu</p>
+      </article>
 
-            <div class="event-card">
-                <h3>Kampüs Konseri</h3>
-                <p><strong>Tarih:</strong> 1 Aralık 2026</p>
-                <p><strong>Yer:</strong> Öğrenci Yaşam Merkezi</p>
-                <p>Öğrenci müzik kulüplerinin düzenlediği canlı müzik dinletisi ve eğlence.</p>
-            </div>
+      <article class="kart">
+        <h2>Üniversiteler Arası Satranç Turnuvası</h2>
+        <p>Tüm fakültelerden öğrencilerin katılımına açık hızlı tempo satranç karşılaşmaları.</p>
+        <p><strong>Kulüp / Kategori:</strong> Zekâ Oyunları ve Satranç Kulübü</p>
+      </article>
 
-            <div class="event-card">
-                <h3>Robotik Kulübü Buluşması</h3>
-                <p><strong>Tarih:</strong> 5 Aralık 2026</p>
-                <p><strong>Yer:</strong> Mühendislik Fakültesi</p>
-                <p>Yeni dönem projelerinin tanıtımı ve Arduino ile temel robotik uygulamaları.</p>
-            </div>
-        </div>
-    </main>
+      <article class="kart">
+        <h2>Doğa Yürüyüşü ve Fotoğraf Gezisi</h2>
+        <p>Hafta sonu kampüs çevresi parkurlarında yürüyüş ve temel kadraj teknikleri etkinliği.</p>
+        <p><strong>Kulüp / Kategori:</strong> Doğa Sporları ve Fotoğrafçılık Kulübü</p>
+      </article>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
